@@ -11,8 +11,6 @@
 - **Leaver:** Julie Uwamahoro's account disabled from one line in the HR file and removed from her department group automatically 17 minutes later, with every step logged.
 - **No stored credentials:** the sync agent runs as a gMSA, and the script's client secret is entered at run time, never saved.
 
-**Controls:** ISO/IEC 27001:2022 5.16 (identity management) and 5.18 (access rights); COBIT 2019 DSS05.04 (manage user identity and logical access).
-
 **Built with:** Windows Server 2022 Active Directory, Microsoft Entra ID (formerly Azure AD), Microsoft Entra Cloud Sync, API-driven inbound provisioning, dynamic groups, PowerShell and Microsoft Graph.
 
 > Built in my own test environment. It is not Equity Bank's environment, uses no Equity Bank data and is not affiliated with Equity Bank. Screenshots taken on 25 October 2026.
