@@ -1,0 +1,4 @@
+EmployeeId,UserName,FirstName,LastName,DisplayName,JobTitle,Department,Status
+100102,zmurenzi@corp.equitybankltd.lab,Zadi,Murenzi,Zadi Murenzi,HR Officer,Human Resources,Active
+100103,nuwineza@corp.equitybankltd.lab,Noella,Uwineza,Noella Uwineza,Financial Analyst,Finance,Active
+100104,juwamahoro@corp.equitybankltd.lab,Julie,Uwamahoro,Julie Uwamahoro,HR Officer,Human Resources,Inactive
