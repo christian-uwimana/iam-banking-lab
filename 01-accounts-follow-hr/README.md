@@ -13,8 +13,6 @@
 
 **Built with:** Windows Server 2022 Active Directory, Microsoft Entra ID (formerly Azure AD), Microsoft Entra Cloud Sync, API-driven inbound provisioning, dynamic groups, PowerShell and Microsoft Graph.
 
-> Built in my own test environment. It is not Equity Bank's environment, uses no Equity Bank data and is not affiliated with Equity Bank. Screenshots taken on 25 October 2026.
-
 ## Files in this folder
 
 | File | What it is |
