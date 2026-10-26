@@ -12,6 +12,6 @@ I'm Christian Uwimana. I built these projects to show how I would run identity a
 
 Each project has its design, step-by-step screenshot evidence, and the scripts and queries I used.
 
-All work was done in my own test environment. It uses no real customer or employee data and is not affiliated with any bank.
+All work was done in my own test environment.
 
 **Contact:** magiechris96@gmail.com · +250787596124 · www.linkedin.com/in/uwimana-christian-505a23199
