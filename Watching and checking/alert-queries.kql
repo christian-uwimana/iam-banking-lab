@@ -1,0 +1,23 @@
+// The three searches behind the Project 4 alert rules (workspace: Monitoring-identity).
+
+// 1. Leaver tried to sign in  (Severity 1 - Error, runs every 5 minutes)
+//    Error 50057 = the account is disabled.
+SigninLogs
+| where ResultType == "50057"
+| project TimeGenerated, UserPrincipalName, IPAddress, AppDisplayName, ResultDescription
+
+// 2. Account created outside HR process  (Severity 2 - Warning, runs every 5 minutes, looks back 1 hour,
+//    split by NewUser so each account raises its own alert)
+//    Keeps only "Add user" events started by a person; the HR sync is an app, so it never matches.
+AuditLogs
+| where OperationName == "Add user"
+| where isnotempty(tostring(InitiatedBy.user.userPrincipalName))
+| project TimeGenerated, CreatedBy = tostring(InitiatedBy.user.userPrincipalName),
+          NewUser = tostring(TargetResources[0].userPrincipalName)
+
+// 3. Repeated failed sign-ins  (Severity 2 - Warning, runs every 5 minutes, looks back 15 minutes)
+//    Error 50126 = wrong user name or password.
+SigninLogs
+| where ResultType == "50126"
+| summarize FailedAttempts = count() by UserPrincipalName
+| where FailedAttempts >= 5

@@ -7,7 +7,7 @@ I'm Christian Uwimana. I built these projects to show how I would run identity a
 | [1. Accounts that follow HR](Accounts%20that%20follow%20HR/) | HR data creates, updates and disables accounts in Active Directory and the cloud, with no tickets. | Done |
 | [2. Two people for every payment](Two%20people%20for%20every%20payment/) | Payment access needs two approvals, expires in 90 days, and nobody can hold both maker and checker roles. | Done |
 | [3. Locking the front door](Locking%20the%20front%20door/) | MFA for all staff, Conditional Access tested in report-only mode before enforcement, and admin rights for two hours only. | Done |
-| 4. Watching and checking | Alerts, a dashboard, quarterly access reviews and a weekly dormant-account report. | Coming next |
+| [4. Watching and checking](Watching%20and%20checking/) | Alerts, a dashboard, quarterly access reviews and a weekly dormant-account report. | Done |
 | 5. Third-party access | Outside auditors get approved, time-limited access that a review can shut off. | Coming next |
 
 Each project has its design, step-by-step screenshot evidence, and the scripts and queries I used.

@@ -1,0 +1,4 @@
+Name,Condition,Severity,Target scope,Target resource type,Signal type,Status
+Account created outside HR process,Table rows > 0 ,Sev2,Monitoring-identity,Log Analytics workspace,microsoft.insights/scheduledqueryrules,Enabled
+Leaver tried to sign in,Table rows > 0 ,Sev1,Monitoring-identity,Log Analytics workspace,microsoft.insights/scheduledqueryrules,Enabled
+Repeated failed sign-ins,Table rows > 0 ,Sev2,Monitoring-identity,Log Analytics workspace,microsoft.insights/scheduledqueryrules,Enabled

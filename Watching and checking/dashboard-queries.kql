@@ -1,0 +1,18 @@
+// The three tiles of the IAM dashboard workbook (workspace: Monitoring-identity).
+
+// 1. Successful sign-ins, with and without MFA  (pie chart)
+SigninLogs
+| where TimeGenerated > ago(30d) and ResultType == "0"
+| summarize SignIns = count() by AuthenticationRequirement
+
+// 2. Account changes: joiners, changes, leavers  (bar chart)
+AuditLogs
+| where TimeGenerated > ago(30d)
+| where OperationName in ("Add user", "Update user", "Disable account", "Delete user")
+| summarize Events = count() by OperationName
+
+// 3. Top 10 accounts by failed sign-ins in the last 7 days  (bar chart)
+SigninLogs
+| where TimeGenerated > ago(7d) and ResultType != "0"
+| summarize Failures = count() by UserPrincipalName
+| top 10 by Failures
