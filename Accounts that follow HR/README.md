@@ -121,3 +121,4 @@ HR is the source of truth. When HR hires someone, their Active Directory account
 **20. Service accounts and inactive accounts.** Three PowerShell checks on DC01, run on one line, so the output is merged into one list: service accounts, accounts with non-expiring passwords, and accounts inactive for 90 days. The only service account is provAgentgMSA (Enabled: True), the gMSA the sync agent runs under, so no one holds its password. The other rows are the built-in Guest (listed twice) and krbtgt accounts and the four lab staff, who have not signed in yet. In a bank, the inactive list would feed the quarterly access review.
 
 ![Service accounts and inactive accounts](screenshots/20-service-account-audit.png)
+
